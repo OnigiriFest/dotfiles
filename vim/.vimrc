@@ -1,18 +1,18 @@
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf'
-Plug 'noahfrederick/vim-noctu'
-Plug 'Rigellute/shades-of-purple.vim'
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'alvan/vim-closetag'
-Plug 'yggdroot/indentline'
-Plug 'jiangmiao/auto-pairs'
-Plug 'othree/html5.vim'
-Plug 'dylanaraps/wal.vim'
+	Plug 'junegunn/fzf'
+	Plug 'noahfrederick/vim-noctu'
+	Plug 'Rigellute/shades-of-purple.vim'
+	Plug 'mattn/emmet-vim'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-surround'
+	Plug 'scrooloose/nerdtree'
+	Plug 'alvan/vim-closetag'
+	Plug 'yggdroot/indentline'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'othree/html5.vim'
+	Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 set number relativenumber
@@ -31,8 +31,10 @@ set rtp+=/usr/bin/fzf
 map <C-p> :FZF<CR>
 
 " Copy between programs
-map <C-c> "+y<CR>
-map <C-v> "+p<CR>
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+"
 
 " New lines withtout insert mode
 map <C-o> O<Esc>

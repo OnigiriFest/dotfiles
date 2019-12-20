@@ -105,6 +105,11 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 export PATH="/home/facundo/.config/composer/vendor/bin:$PATH"
 export PATH="/user/lib/ccache/bin/:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
+export PATH="$HOME/Android/Sdk/tools:$PATH"
+# export PATH="/opt/android-sdk/tools/:$PATH";
+# export PATH="/opt/android-sdk/platforms/:$PATH";
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

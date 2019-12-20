@@ -182,7 +182,11 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-gaps inner 20
+# Flash on focus with github.com/fennerm/flashfocus and picom(compton)
+
+bindsym $mod+n exec --no-startup-id flash_window # flashfocus keybind
+
+gaps inner 10
 for_window [class="^.*"] border pixel 0
 new_window normal 1 px
 
@@ -193,6 +197,7 @@ exec flameshot # screenshot program
 exec picom # compton alternative(for windows transparency)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh #bar
 exec menutray -i # traymenu for launch programs
+exec_always --no-startup-id flashfocus # flashfocus
 
 bindsym $mod+shift+x exec i3lock
 
